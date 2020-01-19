@@ -1,0 +1,62 @@
+[
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "Hi!"
+  },
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "How's it going?"
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "Hey! Good, thanks. How are things with you?"
+  },
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "Great! Just planning my vacation time and wondering if you'd be up for going on a trip?"
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "Yeah?"
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "Where to?"
+  },
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "Not sure. Thinking somewhere warm."
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "I hear that! Are you thinking of a weekend trip, or longer?"
+  },
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "More like a week. Would you be game for that? Maybe Costa Rica or Cuba?"
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "Sounds awesome!"
+  },
+  {
+    "id": "msg01",
+    "user": "user01",
+    "body": "Great! I'll start looking into details!"
+  },
+  {
+    "id": "msg01",
+    "user": "user02",
+    "body": "Fantastic! Talk soon!"
+  }
+]
