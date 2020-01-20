@@ -16,11 +16,8 @@ class ChatScreen extends React.PureComponent {
   }
 
   async componentDidMount() {
-    console.log('DOM is ready for manipulation')
     document.addEventListener('keydown', this._handlePressEnter)
-
     const response = await this.fetchMessages()
-    console.log(response)
     this.storeMessages(response)
     this.scrollChatWindow(0)
   }
@@ -30,7 +27,6 @@ class ChatScreen extends React.PureComponent {
   }
 
   scrollChatWindow = (animationDuration) => {
-    console.log('scroll chat window')
     $('.messages-container').animate({ scrollTop: $(document).height() }, animationDuration)
   }
 
@@ -48,26 +44,16 @@ class ChatScreen extends React.PureComponent {
   }
 
   fetchMessages = async () => {
-    console.log('fetch messages')
-    // it calls fetch with the url to data/messages.json
-    // it converts response to JSON format
     const response = await fetch('data/messages.json')
     const data = await response.json()
-    // it passes the fetched messages in JSON format to the storeMessages function
     return data
   }
 
   storeMessages = (messages) => {
-    console.log('store messages', messages)
-    // call setState and store messages in the state
     this.setState({ messages })
   }
 
   renderMessages = () => {
-    console.log('---render messages---')
-    // fetch all messages from the local state
-    // map all the messages
-    // append individual message body to div tag with the corresponding classes
     const { messages } = this.state
 
     return (
@@ -110,8 +96,6 @@ class ChatScreen extends React.PureComponent {
 
   render() {
     const { messageInput, messages } = this.state
-
-    console.log('this is from the component state (in render)', messages)
 
     return (
       <div className="app-container">
