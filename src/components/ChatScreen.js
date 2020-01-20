@@ -9,7 +9,6 @@ class ChatScreen extends React.PureComponent {
     super(props)
     this.textInput = React.createRef()
     this.state = {
-      newMessage: '',
       messageInput: '',
       messages: null,
     }
@@ -69,21 +68,17 @@ class ChatScreen extends React.PureComponent {
   }
 
   sendMessage = () => {
+    const { messageInput, messages } = this.state
+    messageInput && messages.push({ id: 'msg01', user: 'user01', body: messageInput })
+
     this.setState(
       {
-        newMessage: this.state.messageInput,
+        messages,
       },
       () => {
-        const { newMessage } = this.state
-        const node = document.createElement('div')
-        const textnode = document.createTextNode(newMessage)
-
-        node.appendChild(textnode)
-        node.classList.add('message')
-        node.classList.add('sent')
-        newMessage && document.querySelector('.messages-container').appendChild(node)
+        console.log('from inside sendMessages', messages)
         this.clearTextInput()
-        this.scrollChatWindow(0)
+        this.scrollChatWindow(500)
       }
     )
   }
