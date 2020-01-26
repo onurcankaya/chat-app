@@ -76,7 +76,6 @@ class ChatScreen extends React.PureComponent {
         messages,
       },
       () => {
-        console.log('from inside sendMessages', messages)
         this.clearTextInput()
         this.scrollChatWindow(500)
       }
