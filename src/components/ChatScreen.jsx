@@ -1,6 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 import '../css/styles.css'
+import Message from './Message'
 
 const ENTER_KEY = 13
 
@@ -58,11 +59,7 @@ class ChatScreen extends React.PureComponent {
     return (
       messages &&
       messages.map((message, index) => {
-        return (
-          <div key={index} className={`message ${message.user === 'user01' ? 'sent' : 'received'}`}>
-            {message.body}
-          </div>
-        )
+        return <Message message={message} key={index} />
       })
     )
   }
